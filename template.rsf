@@ -1,0 +1,44 @@
+BasicInfo:
+  Title                   : ForwarderTool
+  CompanyCode             : "00"
+  ProductCode             : "CTR-P-FWDT"
+  ContentType             : Application
+  Logo                    : Distributed
+
+TitleInfo:
+  Category                : Application
+  Platform                : CTR
+  UniqueId                : 0xF8001
+  Version                 : 1
+
+Option:
+  UseOnSD                 : true
+  FreeProductCode         : true
+  EnableCompress          : true
+  EnableCrypt             : false
+
+SystemControlInfo:
+  SaveDataSize            : 0KB
+  StackSize               : 32KB
+  JumpId                  : 0x000400000F800100LL
+  Dependency:
+    - 0x0004013000001602LL
+
+AccessControlInfo:
+  CoreVersion             : 2
+  IdealProcessor          : 0
+  AffinityMask            : 1
+  Priority                : 48
+  FileSystemAccess:
+    - DirectSdmc
+  ServiceAccessControl:
+    - $hostio0
+    - $ctru
+    - am:u
+    - ns:s
+    - apt:u
+    - fs:USER
+    - hid:USER
+    - gsp::Gpu
+    - ptm:u
+    - ac:u

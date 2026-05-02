@@ -1,0 +1,38 @@
+BasicInfo:
+  Title                   : ForwarderTemplate
+  CompanyCode             : "00"
+  ProductCode             : "CTR-P-TEMP"
+  ContentType             : Application
+  Logo                    : Distributed
+
+TitleInfo:
+  Category                : Application
+  Platform                : CTR
+  UniqueId                : 0xF7FFF # A dummy ID
+  Version                 : 0
+
+Option:
+  UseOnSD                 : true
+  FreeProductCode         : true
+  EnableCompress          : false
+  EnableCrypt             : false
+
+SystemControlInfo:
+  SaveDataSize            : 0KB
+  StackSize               : 16KB
+  JumpId                  : 0x000400000D921E00
+  Dependency:
+    - 0x0004013000001602LL
+
+AccessControlInfo:
+  CoreVersion             : 2
+  FileSystemAccess:
+    - DirectSdmc
+  ServiceAccessControl:
+    - $hostio0
+    - $ctru
+    - am:u
+    - apt:u
+    - fs:USER
+    - hid:USER
+    - gsp::Gpu

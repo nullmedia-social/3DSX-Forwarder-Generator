@@ -20,7 +20,7 @@ Option:
 SystemControlInfo:
   SaveDataSize            : 0KB
   StackSize               : 32KB
-  JumpId                  : 0x000400000F800100LL
+  JumpId                  : 0x000400000D921E00
   Dependency:
     - 0x0004013000001602LL
 
@@ -34,8 +34,6 @@ AccessControlInfo:
   ServiceAccessControl:
     - $hostio0
     - $ctru
-    - am:u
-    - ns:s
     - apt:u
     - fs:USER
     - hid:USER
